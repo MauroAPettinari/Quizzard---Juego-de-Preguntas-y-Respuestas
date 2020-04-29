@@ -22,12 +22,11 @@
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="now-ui-icons users_single-02"></i>
             <p>
-              <span class="d-lg-none d-md-block">{{ __("Account") }}</span>
+              <span class="d-lg-none d-md-block">{{ __("Cuenta") }}</span>
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __("Mi Perfil") }}</a>
-            <a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __("Editar Perfil") }}</a>
             <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">

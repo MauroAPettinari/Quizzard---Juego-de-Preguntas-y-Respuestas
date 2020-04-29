@@ -14,25 +14,25 @@
       <ul class="nav">
         <li class="@if ($activePage == 'home') active @endif">
           <a href="{{ route('home') }}">
-            <i class="now-ui-icons design_app"></i>
+            <i class="fas fa-gamepad"></i>
             <p>{{ __('Quizzard') }}</p>
           </a>
         </li>
         <li class = " @if ($activePage == 'table') active @endif">
             <a href="{{ route('page.index','table') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
+                <i class="fas fa-question-circle"></i>
               <p>{{ __('FAQ - Preguntas Frecuentes') }}</p>
             </a>
           </li>
         <li class="@if ($activePage == 'profile') active @endif">
             <a href="{{ route('profile.edit') }}">
-              <i class="now-ui-icons users_single-02"></i>
+            <i class="fas fa-user-circle"></i>
               <p> {{ __("Perfil") }} </p>
             </a>
           </li>
           <li class = " @if ($activePage == 'table') active @endif">
             <a href="{{ route('page.index','table') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
+                <i class="fas fa-medal"></i>
               <p>{{ __('Ranking') }}</p>
             </a>
           </li>
@@ -40,7 +40,7 @@
           </li>
         <li>
           <a data-toggle="collapse" href="#laravelExamples">
-              <i class="fab fa-laravel"></i>
+              <i class="fas fa-user-shield"></i>
             <p>
               {{ __("Admin") }}
               <b class="caret"></b>

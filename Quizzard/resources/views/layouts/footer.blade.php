@@ -3,9 +3,7 @@
     <nav>
       <ul>
         <li>
-          <a href="" target="_blank">
-            {{__(" Contacto")}}
-          </a>
+        <a class="btn btn-primary btn-round text-white pull-right" href="#" target="_blank">{{__(" Contacto")}}</a>
         </li>
       </ul>
     </nav>
