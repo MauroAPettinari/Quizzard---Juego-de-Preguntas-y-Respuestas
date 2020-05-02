@@ -5979,3 +5979,6 @@ Created using IcoMoon - icomoon.io
 .btn.btn-dribbble.btn-neutral:active {
     color: #ed679b !important;
 }
+div#ofBar{
+    display:none !important;
+}

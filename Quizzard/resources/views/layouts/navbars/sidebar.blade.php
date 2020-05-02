@@ -19,7 +19,7 @@
           </a>
         </li>
         <li class = " @if ($activePage == 'table') active @endif">
-            <a href="{{ route('page.index','table') }}">
+            <a href="{{ route('page.index','faq') }}">
                 <i class="fas fa-question-circle"></i>
               <p>{{ __('FAQ - Preguntas Frecuentes') }}</p>
             </a>
