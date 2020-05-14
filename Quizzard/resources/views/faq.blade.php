@@ -1,7 +1,7 @@
 @extends('layouts.app', [
-    'namePage' => 'FAQ - Preguntas Frecuentes',
+    'namePage' => 'FAQ - Preguntas frecuentes',
     'class' => 'login-page sidebar-mini ',
-    'activePage' => 'home',
+    'activePage' => 'faq',
     'backgroundImage' => asset('now') . "/img/bg14.jpg",
 ])
 

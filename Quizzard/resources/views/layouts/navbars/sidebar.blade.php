@@ -18,7 +18,7 @@
             <p>{{ __('Quizzard') }}</p>
           </a>
         </li>
-        <li class = " @if ($activePage == 'table') active @endif">
+        <li class = " @if ($activePage == 'faq') active @endif">
             <a href="{{ route('page.index','faq') }}">
                 <i class="fas fa-question-circle"></i>
               <p>{{ __('FAQ - Preguntas Frecuentes') }}</p>
@@ -48,8 +48,8 @@
           </a>
           <div class="collapse show" id="laravelExamples">
             <ul class="nav">
-              <li class="@if ($activePage == 'table') active @endif">
-                <a href="{{ route('page.index','table') }}">
+              <li class="@if ($activePage == 'preguntas') active @endif">
+                <a href="{{ route('page.index','preguntas') }}">
                   <i class="now-ui-icons design_bullet-list-67"></i>
                   <p> {{ __("Editar Preguntas") }} </p>
                 </a>
