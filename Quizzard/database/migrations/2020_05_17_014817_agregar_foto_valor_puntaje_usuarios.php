@@ -16,7 +16,7 @@ class AgregarFotoValorPuntajeUsuarios extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->integer('puntaje')->nullable()->after('password');
             $table->enum('rol', ['admin', 'user'])->default('user')->after('puntaje');
-            $table->string('fotoperfil')->after('rol');
+            $table->string('fotoperfil')->nullable()->after('rol');
         });
     }
 

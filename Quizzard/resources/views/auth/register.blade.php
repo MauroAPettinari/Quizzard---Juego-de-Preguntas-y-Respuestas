@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="card-body ">
-              <form method="POST" action="{{ route('register') }}">
+              <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
                 <!--Begin input name -->
                 <div class="input-group {{ $errors->has('name') ? ' has-danger' : '' }}">
@@ -81,6 +81,13 @@
                   </div>
                   <input class="form-control" placeholder="{{ __('Repita contraseña') }}" type="password" name="password_confirmation" required>
                 </div>
+
+                <div>
+                    <label for="">Foto de perfil:</label>
+                    <input type="file" name="fotoperfil" id="fotoperfil">
+                 </div>
+
+
                 <div class="form-check text-left">
                   <label class="form-check-label">
                     <input class="form-check-input" type="checkbox">
