@@ -38,6 +38,7 @@
           </li>
             </a>
           </li>
+          @if (auth()->user()->rol == 'admin')
         <li>
           <a data-toggle="collapse" href="#laravelExamples">
               <i class="fas fa-user-shield"></i>
@@ -57,6 +58,7 @@
             </ul>
           </div>
         </li>
+        @endif
       </ul>
     </div>
   </div>
