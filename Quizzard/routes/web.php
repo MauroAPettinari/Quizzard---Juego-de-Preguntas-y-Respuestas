@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@mostrarPregunta')->name('home');
+
+
+Route::post('/formulario', 'HomeController@recibirFormulario', function(){
+     return view('/formularios');
+});
 
 Route::get('/faq',function() {
     return view('/faq');

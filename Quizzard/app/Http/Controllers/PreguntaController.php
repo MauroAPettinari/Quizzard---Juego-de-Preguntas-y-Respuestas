@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Pregunta;
+use App\Categoria;
 use Illuminate\Http\Request;
 
 class PreguntaController extends Controller
@@ -22,6 +23,7 @@ class PreguntaController extends Controller
     {
         $preguntas = Pregunta::all();
 
+
         return view('preguntas.index', compact('preguntas'));
     }
 
@@ -32,7 +34,9 @@ class PreguntaController extends Controller
      */
     public function create()
     {
-        return view('preguntas.create');
+        $categorias = Categoria::all();
+
+        return view('preguntas.create', compact('categorias'));
     }
 
     /**
@@ -45,14 +49,20 @@ class PreguntaController extends Controller
     {
         $request->validate([
             'pregunta'=>'required',
-            'respuesta'=>'required',
+            'categoria'=>'required',
+            'respuestaA'=>'required',
+            'respuestaB'=>'required',
+            'respuestaCorrecta'=>'required',
             'opcion'=>'required',
             'valor'=>'required'
             ]);
 
             $pregunta = new Pregunta([
                 'pregunta' => $request->get('pregunta'),
-                'respuesta' => $request->get('respuesta'),
+                'categoria'=> $request->get('categoria'),
+                'respuestaA'=> $request->get('respuestaA'),
+                'respuestaB'=>$request->get('respuestaB'),
+                'respuestaCorrecta'=> $request->get('respuestaCorrecta'),
                 'opcion' => $request->get('opcion'),
                 'valor' => $request->get('valor')
             ]);
@@ -81,7 +91,9 @@ class PreguntaController extends Controller
     public function edit($id)
     {
         $pregunta = Pregunta::find($id);
-        return view('preguntas.edit', compact('pregunta'));
+        $categorias = Categoria::all();
+
+        return view('preguntas.edit', compact('pregunta','categorias'));
     }
 
     /**
@@ -95,14 +107,20 @@ class PreguntaController extends Controller
     {
         $request->validate([
             'pregunta'=>'required',
-            'respuesta'=>'required',
+            'categoria'=>'required',
+            'respuestaA'=>'required',
+            'respuestaB'=>'required',
+            'respuestaCorrecta'=>'required',
             'opcion'=>'required',
             'valor'=>'required'
         ]);
 
         $pregunta = Pregunta::find($id);
         $pregunta->pregunta =  $request->get('pregunta');
-        $pregunta->respuesta = $request->get('respuesta');
+        $pregunta->categoria = $request->get('categoria');
+        $pregunta->respuestaA = $request->get('respuestaA');
+        $pregunta->respuestaB = $request->get('respuestaB');
+        $pregunta->respuestaCorrecta = $request->get('respuestaCorrecta');
         $pregunta->opcion = $request->get('opcion');
         $pregunta->valor = $request->get('valor');
         $pregunta->save();
@@ -122,5 +140,13 @@ class PreguntaController extends Controller
         $pregunta->delete();
 
         return redirect('/preguntas')->with('success', 'Pregunta borrada!');
+    }
+
+    public function traerPregunta(){
+
+    }
+
+    public function traerCategoria(){
+
     }
 }

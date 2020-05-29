@@ -8,8 +8,15 @@ class Pregunta extends Model
 {
     protected $fillable = [
         'pregunta',
-        'respuesta',
+        'categoria',
+        'respuestaA',
+        'respuestaB',
+        'respuestaCorrecta',
         'opcion',
         'valor'
     ];
+
+    public function categoria(){
+        return $this->belongsTo("App\Categoria","id");
+    }
 }

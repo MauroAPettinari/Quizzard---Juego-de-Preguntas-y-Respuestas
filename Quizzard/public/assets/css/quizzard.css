@@ -1,0 +1,184 @@
+#juego {
+    background-color: white;
+}
+
+label{
+    color:black!important;
+}
+form{
+    padding: 20px;
+}
+
+#quizzard {
+    background: #f96332;
+    text-align:center;
+    margin-bottom:7rem
+}
+
+#terminar{
+    background:linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+#quizzard img {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+/* JUEGO */
+
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
+
+/* Progress bar */
+
+.progressbar {
+    z-index: 2;
+    width: 80%;
+    margin: 25px auto;
+    border: solid 1px #000;
+  }
+  .progressbar .inner {
+    height: 15px;
+    animation: progressbar-countdown;
+    /* Placeholder, this will be updated using javascript */
+    animation-duration: 40s;
+    /* We stop in the end */
+    animation-iteration-count: 1;
+    /* Stay on pause when the animation is finished finished */
+    animation-fill-mode: forwards;
+    /* We start paused, we start the animation using javascript */
+    animation-play-state: paused;
+    /* We want a linear animation, ease-out is standard */
+    animation-timing-function: linear;
+  }
+  @keyframes progressbar-countdown {
+    0% {
+      width: 100%;
+      background: #0F0;
+    }
+    100% {
+      width: 0%;
+      background: #F00;
+    }
+  }
+
+/* Icono */
+/* html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #f96332;
+    background: linear-gradient(90deg, #f96332 0%, #f96332 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px #f96332;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    bottom: 5%;
+    padding: 10px;
+}
+
+button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #f96332;
+    box-shadow: 0 0 60px #f96332;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #f96332;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+} */
