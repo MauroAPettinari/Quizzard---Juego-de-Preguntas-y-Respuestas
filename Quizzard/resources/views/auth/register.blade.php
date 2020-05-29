@@ -84,7 +84,7 @@
 
                 <div>
                     <label for="">Foto de perfil:</label>
-                    <input type="file" name="fotoperfil" id="fotoperfil">
+                    <input type="file" name="fotoperfil" id="fotoperfil" required>
                  </div>
 
 
