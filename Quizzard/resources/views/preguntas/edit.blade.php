@@ -43,7 +43,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="pregunta">Pregunta:</label>
-                        <input type="text" class="form-control" name="pregunta" value={{ $pregunta->pregunta }} />
+                        <input type="text" class="form-control" name="pregunta" value="{{ $pregunta->pregunta }}" />
                     </div>
                     <div class="form-group">
                         <label for="categoria">Seleccione una categoría:</label>
@@ -56,24 +56,24 @@
                     </div>
                     <div class="form-group">
                         <label for="respuesta">Respuesta A:</label>
-                        <input type="text" class="form-control" name="respuestaA" value={{ $pregunta->respuestaA }} />
+                        <input type="text" class="form-control" name="respuestaA" value="{{ $pregunta->respuestaA }}" />
                     </div>
                     <div class="form-group">
                         <label for="respuesta">Respuesta B:</label>
-                        <input type="text" class="form-control" name="respuestaB" value={{ $pregunta->respuestaB }} />
+                        <input type="text" class="form-control" name="respuestaB" value="{{ $pregunta->respuestaB }}" />
                     </div>
                     <div class="form-group">
                         <label for="respuesta">Respuesta C:</label>
                         <input type="text" class="form-control" name="respuestaCorrecta"
-                            value={{ $pregunta->respuestaCorrecta }} required/>
+                            value="{{ $pregunta->respuestaCorrecta }}" required/>
                     </div>
                     <div class="form-group">
                         <label for="opcion">Opcion:</label>
-                        <input type="text" class="form-control" name="opcion" value={{ $pregunta->opcion }} />
+                        <input type="text" class="form-control" name="opcion" value="{{ $pregunta->opcion }}" />
                     </div>
                     <div class="form-group">
                         <label for="valor">Valor de la respuesta:</label>
-                        <input type="text" class="form-control" name="valor" value={{ $pregunta->valor }} />
+                        <input type="text" class="form-control" name="valor" value="{{ $pregunta->valor }}" />
                     </div>
                     <button type="submit" id="guardar" class="btn btn-primary">Guardar cambios</button>
                 </form>

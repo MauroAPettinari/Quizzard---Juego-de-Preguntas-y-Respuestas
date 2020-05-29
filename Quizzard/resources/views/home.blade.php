@@ -27,22 +27,21 @@
                         @endphp
                         <input type="hidden" id="datosPreguntas" value="{{$preguntas}}" name="datosPreguntas">
                         @foreach ($preguntas as $pregunta)
-                        <div>
                         <p><b> {{$pregunta->pregunta}} </p></b>
-
-                        <input type="hidden" id="correcta{{$indice}}" value="{{$pregunta->opcion}}" name="correcta{{$indice}}">
                         <div class="row">
+                        <input type="hidden" id="correcta{{$indice}}" value="{{$pregunta->opcion}}" name="correcta{{$indice}}">
+                        <div class="col-4">
                         <input type="radio" id="respuestaA{{$pregunta->id}}" name="pregunta{{$indice}}"
                             value="A" required>
 
                         <label for="respuestaA{{$pregunta->id}}">{{$pregunta->respuestaA}}</label>
                         </div>
-                        <div class="row">
+                        <div class="col-4">
                         <input type="radio" id="respuestaB{{$pregunta->id}}" name="pregunta{{$indice}}"
                             value="B" required>
                         <label for="respuestaA{{$pregunta->id}}">{{$pregunta->respuestaB}}</label>
                         </div>
-                        <div class="row">
+                        <div class="col-4">
                         <input type="radio" id="respuestaC{{$pregunta->id}}" name="pregunta{{$indice}}"
                             value="C" required>
                             <label for="respuestaA{{$pregunta->id}}">{{$pregunta->respuestaCorrecta}}</label>

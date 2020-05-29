@@ -5,8 +5,14 @@
 label{
     color:black!important;
 }
-form{
-    padding: 20px;
+form {
+    padding: 20px 5px;
+}
+input{
+    margin-right:5px;
+}
+p{
+    margin: 1.5rem;
 }
 
 #quizzard {
