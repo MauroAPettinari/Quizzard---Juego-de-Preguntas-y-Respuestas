@@ -29,16 +29,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    // public function mostrarPregunta(Request $request){
-    //     $preguntas = Pregunta::inRandomOrder()->take(6)->get();
-    //     if ($request){
-    //     $vac = compact("preguntas");
-    //     }else{
-    //     $vac = compact("preguntas","request");
-    //     }
-    //     return view("home", $vac);
-    // }
-
 
     public function mostrarPregunta(){
         $preguntas = Pregunta::inRandomOrder()->take(6)->get();

@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-'namePage' => 'Dashboard',
+'namePage' => 'JUEGO - QUIZZARD',
 'class' => 'login-page sidebar-mini ',
 'activePage' => 'home',
 'backgroundImage' => asset('assets') . "/img/alternativo.jpg",
