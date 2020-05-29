@@ -2,7 +2,7 @@
     'namePage' => 'INGRESAR',
     'class' => 'login-page sidebar-mini ',
     'activePage' => 'login',
-    'backgroundImage' => asset('assets') . "/img/QUIZZARD.png",
+    'backgroundImage' => asset('assets') . "/img/alternativo.jpg",
 ])
 
 @section('content')

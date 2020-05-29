@@ -1,7 +1,7 @@
 @extends('layouts.app', [
     'namePage' => 'REGISTRO',
     'activePage' => 'register',
-    'backgroundImage' => asset('assets') . "/img/bg16.jpg",
+    'backgroundImage' => asset('assets') . "/img/fondo.jpg",
 ])
 
 @section('content')
