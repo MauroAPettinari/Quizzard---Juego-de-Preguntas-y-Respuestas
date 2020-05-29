@@ -67,3 +67,14 @@ class HomeController extends Controller
  }
 
 }
+// array id de preguntas usadas que no este, timer para que vuelva a llamar
+
+    // Traigo ID posibles de seleccionar, 20
+
+    // genero random entre 1 y 20
+
+    // traigo pregunta con id = random
+
+    // tengo pregunta llamo vista con los datos pregunta
+
+    // y repito

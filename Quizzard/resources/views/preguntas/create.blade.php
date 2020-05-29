@@ -17,6 +17,9 @@
     div.form-group label{
         color:black!important;
     }
+    .card{
+        padding: 25px;
+    }
 </style>
 
 <div class="panel-header panel-header-sm">

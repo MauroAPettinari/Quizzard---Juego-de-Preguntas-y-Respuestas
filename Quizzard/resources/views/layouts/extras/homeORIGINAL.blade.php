@@ -25,6 +25,7 @@
                         @php
                         $indice = 1;
                         @endphp
+                        <input type="hidden" id="datosPreguntas" value="{{$preguntas}}" name="datosPreguntas">
                         @foreach ($preguntas as $pregunta)
                         <p><b> {{$pregunta->pregunta}} </p></b>
                         <div class="row">
@@ -54,6 +55,10 @@
                     </form>
                 </div>
 
+        <script type="text/javascript">
+            var preguntas = {!! json_encode($preguntas) !!};
+
+        </script>
         @endsection
 
         @push('js')
@@ -62,5 +67,24 @@
       // Javascript method's body can be found in assets/js/demos.js
       demo.initDashboardPageCharts();
     });
+
+    function hourglass() {
+      var a;
+      a = document.getElementById("div1");
+      a.innerHTML = "&#xf251;";
+      setTimeout(function () {
+          a.innerHTML = "&#xf252;";
+        }, 1000);
+      setTimeout(function () {
+          a.innerHTML = "&#xf253;";
+        }, 2000);
+    }
+    hourglass();
+    setInterval(hourglass, 3000);
+
+
+    var preguntas = {!! json_encode($preguntas->toArray()) !!};
+
+    console.log(users);
         </script>
         @endpush

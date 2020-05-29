@@ -18,7 +18,9 @@
         text-align:center;
         margin-top: 1rem;
     }
-
+    .card{
+        padding: 25px;
+    }
 </style>
 <div class="panel-header panel-header-sm">
 </div>

@@ -38,8 +38,8 @@
                         <tr>
                             <td>ID</td>
                             <td>Pregunta</td>
+                            <td>Categoria</td>
                             <td>Respuesta</td>
-                            <td>Opcion</td>
                             <td>Valor</td>
                             <td colspan=2>Acciones</td>
                         </tr>
@@ -49,7 +49,7 @@
                         <tr>
                             <td>{{$pregunta->id}}</td>
                             <td>{{$pregunta->pregunta}}</td>
-                            <td>{{$pregunta->respuesta}}</td>
+                            <td>@php echo ucfirst($pregunta->categoria); @endphp</td>
                             <td>{{$pregunta->opcion}}</td>
                             <td>{{$pregunta->valor}}</td>
                             <td>
