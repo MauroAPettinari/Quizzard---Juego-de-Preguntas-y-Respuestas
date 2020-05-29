@@ -7,16 +7,26 @@
 
 
 @section('content')
+<style>
+    div.form-group label{
+        color:black!important;
+    }
+    #guardar{
+        background:linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+    }
+    h1{
+        text-align:center;
+        margin-top: 1rem;
+    }
 
+</style>
 <div class="panel-header panel-header-sm">
 </div>
 <div class="content">
     <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="title">{{__("Editar Preguntas")}}</h5>
-                </div>
+        <div class="card col-sm-8 offset-sm-2">
+
+            <h1 class="display-4">{{__("Editar Preguntas")}}</h1>
 
                 @if ($errors->any())
                 <div class="alert alert-danger">
@@ -65,9 +75,9 @@
                         <label for="valor">Valor de la respuesta:</label>
                         <input type="text" class="form-control" name="valor" value={{ $pregunta->valor }} />
                     </div>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" id="guardar" class="btn btn-primary">Guardar cambios</button>
                 </form>
-            </div>
+
         </div>
     </div>
 </div>

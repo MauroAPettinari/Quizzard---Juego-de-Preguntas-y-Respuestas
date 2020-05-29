@@ -6,13 +6,24 @@
 ])
 
 @section('content')
+<style>
+    .display-4{
+        text-align:center;
+    }
+    #nuevaPregunta{
+    background:linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+    }
+    h1{
+        margin-top: 1rem;
+    }
+</style>
 <div class="panel-header panel-header-sm">
 </div>
 <div class="content">
     <div class="card">
-        <h2 class="card-header">Preguntas</h2>
+        <h1 class="display-4">Preguntas</h1>
         <div>
-            <a style="margin: 19px;" href="{{ route('preguntas.create')}}" class="btn btn-primary">Nueva pregunta</a>
+            <a style="margin: 19px;" id="nuevaPregunta" href="{{ route('preguntas.create')}}" class="btn btn-primary">Nueva pregunta</a>
         </div>
         <div class="col-sm-12">
             @if(session()->get('success'))

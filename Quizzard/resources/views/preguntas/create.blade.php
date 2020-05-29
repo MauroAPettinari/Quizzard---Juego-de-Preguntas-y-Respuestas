@@ -6,13 +6,26 @@
 ])
 
 @section('content')
+<style>
+    h1{
+        text-align:center;
+        margin-top: 1rem;
+    }
+    #crear{
+    background:linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+    }
+    div.form-group label{
+        color:black!important;
+    }
+</style>
+
 <div class="panel-header panel-header-sm">
 </div>
 <div class="content">
 
     <div class="row">
-        <div class="col-sm-8 offset-sm-2">
-            <h1 class="display-3">Add a contact</h1>
+        <div class="card col-sm-8 offset-sm-2">
+            <h1 class="display-3">Agregar una pregunta</h1>
             <div>
                 @if ($errors->any())
                 <div class="alert alert-danger">
@@ -59,7 +72,7 @@
                         <input type="text" class="form-control" name="valor" />
                     </div>
 
-                    <button type="submit" class="btn btn-primary-outline">Crear pregunta</button>
+                    <button type="submit" id="crear" class="btn btn-primary-outline">Crear pregunta</button>
                 </form>
             </div>
         </div>
