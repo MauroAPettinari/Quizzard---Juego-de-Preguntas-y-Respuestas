@@ -1,3 +1,9 @@
+<style>
+    .disabled {
+    pointer-events:none;
+    opacity:0.6;
+}
+</style>
 <div class="sidebar" data-color="orange">
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
@@ -30,7 +36,7 @@
               <p> {{ __("Perfil") }} </p>
             </a>
           </li>
-          <li class = " @if ($activePage == 'table') active @endif">
+          <li class =" @if ($activePage == 'table') active @endif disabled">
             <a href="{{ route('page.index','table') }}">
                 <i class="fas fa-medal"></i>
               <p>{{ __('Ranking') }}</p>

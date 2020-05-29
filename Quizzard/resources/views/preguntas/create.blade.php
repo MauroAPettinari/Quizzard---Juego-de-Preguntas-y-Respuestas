@@ -40,11 +40,11 @@
                     @csrf
                     <div class="form-group">
                         <label for="pregunta">Pregunta:</label>
-                        <input type="text" class="form-control" name="pregunta" />
+                        <input type="text" class="form-control" name="pregunta" required/>
                     </div>
                     <div class="form-group">
                         <label for="categoria">Seleccione una categoría:</label>
-                        <select class="form-control" name="categoria">
+                        <select class="form-control" name="categoria" required>
                             <option disabled selected>Seleccione Categoría</option>
                             @foreach ($categorias as $categoria)
                             <option value="{{$categoria["nombre"]}}">{{ucfirst($categoria["nombre"])}}</option>
@@ -52,24 +52,24 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="respuesta">Respuesta Correcta:</label>
-                        <input type="text" class="form-control" name="respuestaCorrecta" />
-                    </div>
-                    <div class="form-group">
                         <label for="respuesta">Respuesta A:</label>
-                        <input type="text" class="form-control" name="respuestaA" />
+                        <input type="text" class="form-control" name="respuestaA" required/>
                     </div>
                     <div class="form-group">
                         <label for="respuesta">Respuesta B:</label>
-                        <input type="text" class="form-control" name="respuestaB" />
+                        <input type="text" class="form-control" name="respuestaB" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="respuesta">Respuesta C:</label>
+                        <input type="text" class="form-control" name="respuestaCorrecta" required/>
                     </div>
                     <div class="form-group">
                         <label for="opcion">Opcion:</label>
-                        <input type="text" class="form-control" name="opcion" />
+                        <input type="text" class="form-control" name="opcion" required/>
                     </div>
                     <div class="form-group">
                         <label for="valor">Valor:</label>
-                        <input type="text" class="form-control" name="valor" />
+                        <input type="text" class="form-control" name="valor" required/>
                     </div>
 
                     <button type="submit" id="crear" class="btn btn-primary-outline">Crear pregunta</button>

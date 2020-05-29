@@ -55,17 +55,17 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="respuesta">Respuesta Correcta:</label>
-                        <input type="text" class="form-control" name="respuestaCorrecta"
-                            value={{ $pregunta->respuestaCorrecta }} />
-                    </div>
-                    <div class="form-group">
                         <label for="respuesta">Respuesta A:</label>
                         <input type="text" class="form-control" name="respuestaA" value={{ $pregunta->respuestaA }} />
                     </div>
                     <div class="form-group">
                         <label for="respuesta">Respuesta B:</label>
                         <input type="text" class="form-control" name="respuestaB" value={{ $pregunta->respuestaB }} />
+                    </div>
+                    <div class="form-group">
+                        <label for="respuesta">Respuesta C:</label>
+                        <input type="text" class="form-control" name="respuestaCorrecta"
+                            value={{ $pregunta->respuestaCorrecta }} required/>
                     </div>
                     <div class="form-group">
                         <label for="opcion">Opcion:</label>

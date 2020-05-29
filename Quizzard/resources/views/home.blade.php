@@ -15,16 +15,10 @@
     {{-- <script src="/assets/js/quizzard.js"></script> --}}
 </head>
 
-{{-- <img src="/storage/fotosCategorias/historia.jpg" alt="">
-<img src="/storage/fotosCategorias/deporte.jpg" alt="">
-<img src="/storage/fotosCategorias/entretenimiento.jpg" alt="">
-<img src="/storage/fotosCategorias/arte.jpg" alt=""> --}}
-
 <div class="panel-header panel-header-sm">
 </div>
 <div class="content container">
             <div id="quizzard" class="card col-8 offset-2">
-                    {{-- <img src="/storage/fotosCategorias/inicial.jpg"> --}}
                     <form action="/formulario" method="POST">
                         @csrf
 
@@ -39,18 +33,18 @@
                         <input type="hidden" id="correcta{{$indice}}" value="{{$pregunta->opcion}}" name="correcta{{$indice}}">
                         <div class="row">
                         <input type="radio" id="respuestaA{{$pregunta->id}}" name="pregunta{{$indice}}"
-                            value="A">
+                            value="A" required>
 
                         <label for="respuestaA{{$pregunta->id}}">{{$pregunta->respuestaA}}</label>
                         </div>
                         <div class="row">
                         <input type="radio" id="respuestaB{{$pregunta->id}}" name="pregunta{{$indice}}"
-                            value="B">
+                            value="B" required>
                         <label for="respuestaA{{$pregunta->id}}">{{$pregunta->respuestaB}}</label>
                         </div>
                         <div class="row">
                         <input type="radio" id="respuestaC{{$pregunta->id}}" name="pregunta{{$indice}}"
-                            value="C">
+                            value="C" required>
                             <label for="respuestaA{{$pregunta->id}}">{{$pregunta->respuestaCorrecta}}</label>
                         </div>
                         </div>
@@ -64,8 +58,6 @@
 
         <script type="text/javascript">
             var preguntas = {!! json_encode($preguntas) !!};
-
-    // console.log(preguntas);
 
         </script>
         @endsection

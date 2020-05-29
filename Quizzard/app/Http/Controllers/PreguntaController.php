@@ -48,13 +48,13 @@ class PreguntaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'pregunta'=>'required',
+            'pregunta'=>'required|string',
             'categoria'=>'required',
-            'respuestaA'=>'required',
-            'respuestaB'=>'required',
-            'respuestaCorrecta'=>'required',
-            'opcion'=>'required',
-            'valor'=>'required'
+            'respuestaA'=>'required|string',
+            'respuestaB'=>'required|string',
+            'respuestaCorrecta'=>'required|string',
+            'opcion'=>'required|alpha|max:1',
+            'valor'=>'required|integer|min:1|max:5'
             ]);
 
             $pregunta = new Pregunta([
@@ -106,13 +106,13 @@ class PreguntaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'pregunta'=>'required',
+            'pregunta'=>'required|string',
             'categoria'=>'required',
-            'respuestaA'=>'required',
-            'respuestaB'=>'required',
-            'respuestaCorrecta'=>'required',
-            'opcion'=>'required',
-            'valor'=>'required'
+            'respuestaA'=>'required|string',
+            'respuestaB'=>'required|string',
+            'respuestaCorrecta'=>'required|string',
+            'opcion'=>'required|alpha|max:1',
+            'valor'=>'required|integer|min:1|max:5'
         ]);
 
         $pregunta = Pregunta::find($id);
